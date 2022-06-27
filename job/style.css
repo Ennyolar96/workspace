@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 89%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f73;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.overAllContainer{
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* headers */
+.collapse .navbar-nav .nav-item .nav-link{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 550;
+}
+.collapse .navbar-nav .nav-item .nav-link:hover{
+    color: #f73;
+}
+.btn:active, .btn:focus{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:none!important;
+}
+.navbar-toggler{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:0 0 1px 1px #f74!important;
+}
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+    padding: 10px;
+} 
+.dropdown-menu .dropdown-item:hover{
+    color: #f73;
+    background-color: transparent;
+}
+.dropdown-menu{
+    /* box-shadow: inset 0 0 2px #f73; */
+    border-top: 2px solid #f73;
+} 
+
+.btn-getstarted{
+    background-color: #f73;
+    color: #fff;
+}
+.btn-getstarted:hover{
+    background-color: #111;
+    color: #fff;
+}
+.navbar-brand img{
+    margin-top: -10px;
+    width: 200px;
+    height: 40px;
+}
+#hero_section{
+    margin:20px -12px 0;
+}
+.hero_img img{
+    height: 300px;
+    /* margin:0 0 0 100px; */
+}
+.hero__child{
+    margin-top: 90px;
+}
+.hero__child h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #127;
+}
+.hero__child p{
+    font-size: .9rem;
+    font-weight: 400;
+}
+.full_name{
+    padding: 3px;
+    border-radius: 10px 0  0 10px;
+    border: 1px solid #333;
+    outline: none;
+}
+.email_add{
+    margin-left: -10px;
+    padding: 3px;
+    border: 1px solid #333;
+    border-radius:0 10px 10px 0;
+    outline: none;
+}
+.full_name::placeholder, .email_add::placeholder{
+    padding-left: 10px;
+}
+.form_btn{
+    margin-left: -70px;
+    padding: 4px 20px;
+    border-radius: 10px;
+    background-color: #f73;
+    color: #fff;
+    border: none;  
+}
+/* job card */
+#job_section{
+    margin:100px -12px 0;
+}
+center h4{
+    color: #127;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.job_card{
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 4px 14px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 25px;
+    background-color: #fff;
+
+}
+.card_parent h5{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.card_parent p{
+    font-size: .8rem;
+}
+.card_parent button{
+    margin-top: 20px;
+    background-color: #f73;
+    border-radius: 10px;
+    color: #fff;
+    margin-left: 30px;
+}
+.card_parent button:hover{
+    background-color: #000;
+    color: #fff;
+}
+#digital, #media, #services, #DGD, #social{
+    margin-top: 50px;
+}
+h5{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+h5 >a{
+    text-decoration: none;
+    color: #000;
+}
+h5 > a:hover{
+    color: #f73;
+}
+p{
+    font-size: .9rem;
+}
+li{
+    font-size: .9rem;
+}
+.job_btn{
+    margin:0 0 20px;
+    background-color: #f73;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 20px;
+}
+.job_btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+/* submit job application */
+/* #jobfrom{
+    position: relative;
+} */
+textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+}
+.upload > label{
+color: #9d9;
+}
+#popup{
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.popup_imge{
+    background-color: #f0f0f0;
+    display: block;
+    width: 30%;
+    padding: 30px;
+    margin:100px auto;
+}
+.closebtn{
+    position: absolute;
+    top: 7%;
+    right: 30%;
+    color: #f73;
+    outline: 2px solid #f73;
+    padding: 3px 1%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.form_suc_h6{
+    color: #9d9;
+}
+.form_note_small{
+    font-size: .8rem;
+}
+@media screen and (max-width:991px) {
+    .card_parent button{
+        margin-left: 0;
+    }
+    .hero__child{
+        margin-top: 0;
+    }
+    .full_name{
+        border-radius: 10px;
+    }
+    .email_add{
+        margin:10px 0 0;
+        border-radius:10px;
+    }
+    .form_btn{
+        margin-left: 0px;
+    }
+    .popup_imge{
+        width: 50%;
+        margin-top: 200px;
+    }
+    .closebtn{
+        top: 20%;
+        padding: 2px 2%;
+        right: 15%;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:767px) {
+    .hero__child h1{
+        text-align: center;
+        font-size: 3em;
+    }
+    .hero__child p{
+        text-align: center;
+    }
+    .hero_form{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .full_name{
+        width: 100%;
+    }
+    .email_add{
+        width: 100%;
+        margin:15px 0 0;
+    }
+    .form_btn{
+        width: 100%;
+        margin:15px 0 0;
+        /* text-align: left; */
+    }
+
+    .card_parent button{
+        width: 100%;
+    }
+}
+@media screen and (max-width:520px) {
+    .popup_imge{
+        width: 70%;
+    }
+    .closebtn{
+        top: 10%;
+        padding: 2px 3%;
+        right: 2%;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .hero__child h1{
+        font-size: 2rem;
+    }
+    .popup_imge{
+        width: 100%;
+    }
+    .closebtn{
+        top: 10%;
+        padding: 2px 3%;
+        right: 1%;
+        font-size: 1rem;
+    }
+}

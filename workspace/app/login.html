@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/workspace/css/space.css">
+    <!-- google font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font-awesome links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+     <!-- site icon -->
+     <link rel="icon" href="/workspace/image/new-png-mleage-mark-2-6.png" type="image/gif" sizes="16x16">
+     <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Booking | Book for reading and working environment</title>
+</head>
+<body class="logincolor">
+
+    <div class="container-fluid">
+        <div class="overallcontainer">
+            <section id="theForm" class="container">
+                <form action="/app/booking.html" method="get" class="m-4">
+                    <h4 class="message">Welcome again!</h4>
+                    <div class="input-control">
+                        <label for="username" class="mt-3">Username</label>
+                        <input type="text" name="username" id="username" placeholder="Email address" required>
+                    </div>
+                    <div class="input-control mt-4">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="pwd" required>
+                    </div>
+                    <div class="row row-cols-2 my-2 remind_con">
+                       <div class="remind_con1">
+                            <label for="remind-me">Keep me login</label> &nbsp;
+                            <input type="checkbox" name="" id="remind-me">
+                       </div>
+                        <div class="remind_con1">
+                            <a href="#" class="forget">Forget Password?</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-lg logbtn ms-0 mt-1 m-4">Login</button>
+                    
+                    <div class="py-1 not-men">
+                       <p>Not a member yet? <a href="./register.html">Register now</a> </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script>
+        // function remindMe(){
+            var username = document.getElementById("username");
+            var password = document.getElementById("pwd");
+
+            username.value = localStorage.getItem('username');
+            username.oninput = () => {
+                localStorage.setItem('username', username.value)
+            }
+        
+            password.value = localStorage.getItem('password');
+            password.oninput = () => {
+                localStorage.setItem('password', password.value)
+            }
+        // }
+
+     
+
+    </script>
+</body>
+</html>

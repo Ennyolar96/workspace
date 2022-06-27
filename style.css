@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 89%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f73;
+}
+.overAllContainer{
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:active, .btn:focus{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:none!important;
+}
+.navbar-toggler{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:0 0 1px 1px #f74!important;
+}
+.navbar-brand img{
+    margin: -10px 0 0;
+    width: 200px;
+    height: 40px;
+}
+.collapse .navbar-nav .nav-item .nav-link{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 550;
+}
+.collapse .navbar-nav .nav-item .nav-link:hover{
+    color: #f73;
+}
+/* .collapse .navbar-nav .nav-item .nav-link{
+    display: none;
+} */
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+    padding: 10px;
+} 
+.dropdown-menu .dropdown-item:hover{
+    color: #f73;
+    background-color: transparent;
+}
+.dropdown-menu{
+    /* box-shadow: inset 0 0 2px #f73; */
+    border-top: 2px solid #f73;
+}
+
+#hero{
+    /* background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./asset/hero.jpg"); */
+    background-image: url("./asset/Rectangle 23.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    height: 400px;
+    margin: 0 -12px;
+}
+.firstcol h1{
+    font-weight: bolder;
+    font-size: 2.5em;
+    margin-right: 10px;
+    line-height: 1.5;
+    color: #0F1C70;
+    margin-bottom: 25px;
+}
+.this_span{
+    color: #f73;
+}
+.image{
+    display: none;
+}
+.btn-getstarted{
+    background-color: #f73;
+    color: #fff;
+}
+.btn-getstarted:hover{
+    background-color: #111;
+    color: #fff;
+}
+.btn_div{
+    margin-top: 20px;
+}
+.btn-hero{
+    color: #fff;
+    background-color: #f73; 
+    margin: 10px 0;
+}
+.btn-hero2{
+    border: 1px solid #f73;
+}
+.btn-hero:hover{
+    background-color: #111; 
+    color: #fff;
+}
+.btn-hero1{
+    color: #fff;
+    background-color: #111; 
+}
+.btn-hero1:hover, .btn-hero2:hover{
+    background-color: #f73; 
+    color: #fff;
+}
+.secondcol{
+    margin-top: -40px;
+}
+
+ /* Slideshow container */
+ .slide_show-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev_my, .next_my {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #f73;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+  }
+  .my__S_lides {display: none}
+  .prev_my{
+    left: 60px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next_my {
+    right: 60px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev_my:hover, .next_my:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #000;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .my_fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+center > h3{
+    display: inline-block;
+    border-bottom: 2px solid #f73;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    /* color: #f73; */
+}
+.secondBrand{
+    color: #f73;
+}
+.probtn{
+    display: block;
+    width: 80%;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.probtn:hover{
+    color: #fff;
+    background-color: #f73;
+}
+/* banner contact page */
+.contactContainer{
+    margin-top: 100px;
+}
+.back-link{
+    font-weight: 600;
+}
+#banner{
+    margin: 80px 0 0;
+}
+#second_banner{
+    margin: 50px 0 0 ;
+}
+.bannercontact img{
+    width: 70%;
+    height: 400px;
+}
+.bannercontact input{
+    border-radius: 10px;
+}
+.bannercontact textarea{
+    border-radius: 10px;
+    max-height: 150px;
+    min-height: 150px;
+    height: 100px;
+}
+.bannercontact button{
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #f73;
+    color: #fff;
+}
+.bannercontact button:hover{
+    background-color: #111;
+    color: #fff;
+}
+.bannercontact img{
+    width: 100%;
+    height: 400px;
+}
+.firstcol img{
+    margin: -70px 0 0;
+}
+
+center.footer a{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin:20px 20px 10px;
+    color: #000;
+}
+center.footer a:hover{
+    color: #f73;
+}
+center.footer{
+    margin: 30px;
+}
+
+/* COMING SOON PAGE */
+/* #page{
+    margin-top:80px;
+}
+.ourpage{
+    margin-top: 250px;
+}
+.ourpage h1{
+    text-align: center;
+    animation: textshow  2s infinite ease-in;
+}
+@keyframes textshow {
+    0%{
+        color: #111;
+        transform: scale(1,1);
+    }
+    50%{
+        color: #f73;
+        transform: scale(1.2, 1.2);
+    }
+    100%{
+        color: #111;
+        transform: scale(1,1);
+    }
+} */
+@media screen and (max-width:991px ) {
+    #hero{
+        height: 600px;
+    }
+    .firstcol h1{
+        font-size: 2.2em;
+        margin-right: 0;
+    }
+    .prev_my{
+        left: 0;
+    }
+      
+    .next_my {
+        right: 0;
+    }
+}
+@media screen and (max-width:767px ) {
+    /* .btn-hero, .btn-hero1 {
+        display: none;
+    } */
+    /* .collapse .navbar-nav .nav-item .nav-link{
+        display: none;
+    } */
+    #banner{
+        margin:50px 0;
+    }
+    #hero{
+        background-image:none;
+        height: 1000px;
+    }
+    .h1, .bannerP{
+        text-align: center;
+    }
+    .bannercontact img{
+        width: 100%;
+        height: 400px;
+    }
+    .btn-hero3{
+        display: block;
+        margin: 30px auto;
+    }
+    .prev_my, .next_my {
+        top: 30%;
+    }
+
+    .secondRow{
+        flex-direction: column-reverse;
+    }
+    .firstcol{
+        margin: 0;
+    }
+    .image{
+        display: block;
+        margin: 0 auto;
+    }
+    .image img{
+        /* width: 251px; */
+        width: 100%;
+        height: 298px;
+    }
+    .secondcol{
+        margin: 10px 0 50px;
+    }
+}
+@media screen and (max-width:515px) {
+    .btn-hero {
+        margin: 5px auto;
+        padding:1% 15%!important;
+    }
+    .btn-hero1{
+        margin: 5px auto;
+        padding:1% 19%!important;
+    }
+    .btn-hero2{
+        margin: 5px auto;
+        padding:1% 24%!important;
+    }
+    #hero{
+        height: 1150px;
+    }
+    .btn_div{
+        display: flex;
+        flex-direction: column;
+    }
+    .hideimage{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:400px ) {
+    .firstcol h1{
+        font-size: 1.8em;
+        margin-right: 0;
+    }
+    .btn-hero {
+        margin: 5px auto;
+        padding:1% 15%!important;
+    }
+    .btn-hero1{
+        margin: 5px auto;
+        padding:1% 20%!important;
+    }
+    .btn-hero2{
+        margin: 5px auto;
+        padding:1% 27%!important;
+    }
+    .image img{
+        height: 198px;
+    }
+    #hero{
+        height: 1000px;
+    }
+}
+@media screen and (max-width:355px) {
+    .firstcol h1{
+        font-size: 1.5em;
+    }
+    .btn-hero1 {
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .prev, .next,.text {font-size: 11px}
+    #hero{
+        height: 1110px;
+    }
+  }

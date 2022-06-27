@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 89%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f73;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+.overAllContainer{
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* headers */
+.collapse .navbar-nav .nav-item .nav-link{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 550;
+}
+.collapse .navbar-nav .nav-item .nav-link:hover{
+    color: #f73;
+}
+.btn:active, .btn:focus{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:none!important;
+}
+.navbar-toggler{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:0 0 1px 1px #f74!important;
+}
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+    padding: 10px;
+} 
+.dropdown-menu .dropdown-item:hover{
+    color: #f73;
+    background-color: transparent;
+}
+.dropdown-menu{
+    /* box-shadow: inset 0 0 2px #f73; */
+    border-top: 2px solid #f73;
+} 
+
+.btn-getstarted{
+    background-color: #f73;
+    color: #fff;
+}
+.btn-getstarted:hover{
+    background-color: #111;
+    color: #fff;
+}
+.navbar-brand img{
+    margin-top: -10px;
+    width: 200px;
+    height: 40px;
+}
+.hero{
+    position: relative;
+}
+.firstmeet{
+    margin-top: 100px;
+}
+.meet > h1{
+    font-size: 3em;
+    font-weight: bold;
+    color: #0f1c70;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.meet > p{
+    font-weight: 520;
+    font-size: .9em;
+}
+.getStart{
+    border: 1px solid #222;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 35px;
+}
+.getStart > label{
+    font-weight: 520;
+    color: #f73;
+}
+.getStart > select{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #0f1c70;
+    width: 80%;
+    outline: none;
+}
+.fa-angle-right{
+    color: #0f1c70;
+    margin-left: 10px;
+}
+.meet > img{
+    width: 100%;
+    height: 600px;
+    margin-top: -50px;
+}
+
+/* Am Expert */
+#amExpert{
+    display: block;
+    width: 50%;
+    margin: 0 auto 50px;
+    padding: 3%;
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    display: none;
+}
+#ineedExpert{
+    display: block;
+    width: 50%;
+    margin: 0 auto 50px;
+    padding: 3%;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    display: none;
+}
+.thepos{
+    position: relative;
+}
+.close{
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding:1px 1.5%;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+}
+.close:hover{
+    color: #fff;
+}
+.amExpert textarea{
+    max-height: 100px;
+    min-height: 100px;
+    height: 100px;
+}
+.amExpert button{
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background-color: #f73;
+    color: #fff;
+}
+.amExpert button:hover{
+    background-color: #111;
+    color: #fff;
+}
+.amExpert img{
+    display:block;
+    margin: 100px 0;
+}
+
+#popup{
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.popup_imge{
+    background-color: #f0f0f0;
+    display: block;
+    width: 30%;
+    padding: 30px;
+    margin:100px auto;
+}
+.closebtn{
+    position: absolute;
+    top: 7%;
+    right: 30%;
+    color: #f73;
+    outline: 2px solid #f73;
+    padding: 3px 1%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.form_suc_h6{
+    color: #9d9;
+}
+.form_note_small{
+    font-size: .8rem;
+}
+
+center.footer a{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin:20px 20px 10px;
+    color: #000;
+}
+center.footer a:hover{
+    color: #f73;
+}
+center.footer{
+    margin: 30px;
+}
+
+@media screen and (max-width:1250px) {
+    #amExpert{
+        width: 60%;
+        left: 0;
+        right: 0;
+    }
+    #ineedExpert{
+        width: 60%;
+        left: 0;
+        right: 0;
+    }
+}
+@media screen and (max-width:990px) {
+    .meet > h1{
+        font-size: 2em;
+    }
+    .meet > img{
+        height: 600px;
+        width: 100%;
+    }
+    #amExpert{
+        width: 80%;
+        left: 0;
+        right: 0;
+    }
+    #ineedExpert{
+        width: 80%;
+        left: 0;
+        right: 0;
+    }
+    .popup_imge{
+        width: 50%;
+        margin-top: 200px;
+    }
+    .closebtn{
+        top: 20%;
+        padding: 2px 2%;
+        right: 15%;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:800px) {
+    #amExpert{
+        width: 85%;
+        left: 0;
+        right: 0;
+        top: 100px;
+    }
+    #ineedExpert{
+        width: 85%;
+        left: 0;
+        right: 0;
+        top: 100px;
+    }
+    .close{
+        border: 3px solid #000;
+        color: #000;
+        top: -55px;
+        left:-5px;
+        font-size: 1rem;
+        padding:0 0.545rem;
+    }
+}
+@media screen and (max-width:767px) {
+    .herorow{
+        flex-direction: column-reverse;
+    }
+    .amExpert img{
+        display: none;
+    }
+    .meet > img{
+        height: 400px;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    .meet > h1{
+        font-size: 1.8em;
+        text-align: center;
+    }
+    .meet p{
+        text-align: center;
+    }
+    .firstmeet{
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+    .getStart{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:560px) {
+    .getStart > select{
+        width: 65%;
+    }
+}
+@media screen and (max-width:520px) {
+    .popup_imge{
+        width: 70%;
+    }
+    .closebtn{
+        top: 10%;
+        padding: 2px 3%;
+        right: 2%;
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:400px) {
+    .hero__child h1{
+        font-size: 2rem;
+    }
+    .popup_imge{
+        width: 100%;
+    }
+    .closebtn{
+        top: 10%;
+        padding: 2px 3%;
+        right: 1%;
+        font-size: 1rem;
+    }
+}

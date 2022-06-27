@@ -1,0 +1,166 @@
+@keyframes scroll{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 3));
+  }
+}
+.slider {
+  width: 100%;
+  background: white;
+  height: 300px;
+  margin: auto;
+  overflow:hidden;
+  position: relative;
+  border-radius: 10px;
+  display: none;
+}
+.slider-wrap {
+		animation: scroll 20s linear infinite;
+		display: flex;
+		width: calc(250px * 6);
+    height:100%;
+	}
+.slide{
+  width:100%;
+  height:300px;
+  text-align:center;
+  margin: 0 5px;
+}
+
+/* the banner page */
+.brandtext{
+  position: relative;
+  margin: -20px 10px 10px;
+}
+
+.brandtext2 {
+  font-size:3em;
+  font-weight:bolder;
+  float:left;
+  opacity:0;
+  position:absolute;
+  top:0%;
+  left:0%;
+  color: #fff;
+  line-height: 1.5;
+}
+@media screen and (max-width:990px){
+  .slider {
+    display: block;
+  }
+}
+@media screen and (max-width:700px) {
+  .brandtext2 {
+    font-size:2.7em;
+  }
+}
+@media screen and (max-width:400px) {
+  .brandtext2 {
+    font-size:2.1em;
+  }
+}
+@media screen and (max-width:350px) {
+  .brandtext2 {
+    font-size:2em;
+  }
+}
+
+.banner1 {
+  -webkit-animation: w1anim 25s infinite;
+          animation: w1anim 25s infinite;
+}
+
+.banner2 {
+  -webkit-animation: w2anim 25s infinite;
+          animation: w2anim 25s infinite;
+}
+
+@-webkit-keyframes w1anim {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+      opacity: 1;
+    }
+    30%{
+      opacity: 1;
+    }
+  40% {
+    opacity:0;
+  }
+}
+
+
+
+@keyframes w1anim {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  20%{
+      opacity: 1;
+    }
+    30%{
+      opacity: 1;
+    }
+  40% {
+    opacity:0;
+  }
+}
+
+
+@-webkit-keyframes w2anim {
+  40%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  60%{
+      opacity: 1;
+    }
+    70%{
+      opacity: 1;
+    }
+    80%{
+      opacity: 1;
+    }
+    90%{
+      opacity: 1;
+    }
+  100% {
+    opacity:0;
+  }
+}
+
+
+@keyframes w2anim {
+  40%{
+    opacity: 0;
+  }
+  50%{
+      opacity: 1;
+    }
+    60%{
+        opacity: 1;
+      }
+      70%{
+        opacity: 1;
+      }
+      80%{
+        opacity: 1;
+      }
+      90%{
+        opacity: 1;
+      }
+    100% {
+      opacity:0;
+    }
+}       

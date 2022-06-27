@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="giveInfo" class="m-4"></p>
+
+    <!-- Select the option like hours, days, week or month -->
+    <div class="ms-4 m-3" id="spaceChoice">
+        <label for="Select_choice">Select your plan </label>
+        <select name="" class="btn btn-outline-dark btn-sm ms-2 make_option"  id="spaceselect" onclick="checkOption()">
+            <option value="Hours">Hourly</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+        </select>
+    </div>
+
+    <!-- the hourly plan -->
+<section id="hourlyChoices">
+    <p class="mx-4">Note: Per hour is &#8358;200 on Hot Desk Plan While Its &#8358;350 Per hours on WorkStation plan. </p>
+    <p class="mx-4">Select the days and choose the hours you wish to spend.</p>
+    </section>
+
+    <div class="btn btn-sm btn-dark ms-4 mt-1" >
+        <input type="checkbox" name="day1" id="day1" onclick="openDay1()">
+        <label for="Days">Day 1</label>
+    </div>
+    <!-- the the user click on the day 1 option -->
+    <div id="day1CheckBox">
+        <div class="input-user-control">
+            <label for="date">Select Date</label>
+            <input type="date" name="Stating_Date" id="day1_starting">
+        </div>
+
+        <div class="input-user-control">
+                <label for="hours">How Many Hours</label>
+                <input type="number" min="1" max="9" placeholder="in range of 9hours" id="howManyHour">
+        </div>
+        <div class="input-user-control">
+                <label for="hours">Stating Time</label>
+                <select name="" id="day1_starting_time">
+                    <option value="">.......</option>
+                    <option value="8am">8am</option>
+                    <option value="9am">9am</option>
+                    <option value="10am">10am</option>
+                    <option value="11am">11am</option>
+                    <option value="12pm">12pm</option>
+                    <option value="1pm">1pm</option>
+                    <option value="2pm">2pm</option>
+                    <option value="3pm">3pm</option>
+                    <option value="4pm">4pm</option>
+                </select>
+        </div>
+        <div class="input-user-control">
+                <label for="hours">Ending Time</label>
+                <select name="" id="day1_closing_time">
+                    <option value="">......</option>
+                    <option value="9am">9am</option>
+                    <option value="10am">10am</option>
+                    <option value="11am">11am</option>
+                    <option value="12am">12am</option>
+                    <option value="1pm">1pm</option>
+                    <option value="2pm">2pm</option>
+                    <option value="3pm">3pm</option>
+                    <option value="4pm">4pm</option>
+                    <option value="5pm">5pm</option>
+                </select>
+        </div>
+    </div>  <!-- the the user click on the day 1 option ending tag -->
+
+
+    <div class="btn btn-sm btn-dark ms-4 mt-1" >
+        <input type="checkbox" name="day2" onclick="openDay2()" id="day2">
+        <label for="Days">Day 2</label>
+    </div>
+        <!-- the the user click on the day 1 option -->
+    <div id="day2CheckBox">
+        <div class="input-user-control">
+            <label for="date">Select Date</label>
+            <input type="date" name="Stating_Date" id="day2_starting">
+        </div>
+
+        <div class="input-user-control">
+            <label for="hours">How Many Hours</label>
+            <input type="number" min="1" max="9" placeholder="in range of 9hours" id="howManyHour1">
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Stating Time</label>
+            <select name="" id="day2_starting_time">
+                <option value="">........</option>
+                <option value="8am">8am</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12pm">12pm</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+            </select>
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Ending Time</label>
+            <select name="" id="day2_closing_time">
+                <option value="">........</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12am">12am</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+                <option value="5pm">5pm</option>
+            </select>
+        </div>
+    </div>  <!-- the the user click on the day 2 option ending tag -->
+
+
+        <div class="btn btn-sm btn-dark ms-4 mt-1" >
+            <input type="checkbox" name="day3" onclick="openDay3()" id="day3" >
+            <label for="Days">Day 3</label>
+        </div>
+
+        <!-- the the user click on the day 1 option -->
+    <div id="day3CheckBox">
+        <div class="input-user-control">
+            <label for="date">Select Date</label>
+            <input type="date" name="Stating_Date" id="day3_starting">
+        </div>
+
+        <div class="input-user-control">
+            <label for="hours">How Many Hours</label>
+            <input type="number" min="1" max="9" placeholder="in range of 9hours" id="howManyHour2">
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Stating Time</label>
+            <select name="" id="day3_starting_time">
+                <option value="">.......</option>
+                <option value="8am">8am</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12pm">12pm</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+            </select>
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Ending Time</label>
+            <select name="" id="day3_closing_time">
+                <option value="">.......</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12am">12am</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+                <option value="5pm">5pm</option>
+            </select>
+        </div>
+    </div>  <!-- the the user click on the day 3 option ending tag -->
+
+
+        <div class="btn btn-sm btn-dark ms-4 mt-1" >
+            <input type="checkbox" name="day4" onclick="openDay4()" id="day4">
+            <label for="Days">Day 4</label>
+        </div>
+
+        <!-- the the user click on the day 1 option -->
+    <div id="day4CheckBox">
+        <div class="input-user-control">
+            <label for="date">Select Date</label>
+            <input type="date" name="Stating_Date" id="day4_starting">
+        </div>
+
+        <div class="input-user-control">
+            <label for="hours">How Many Hours</label>
+            <input type="number" min="1" max="9" placeholder="in range of 9hours" id="howManyHour3">
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Stating Time</label>
+            <select name="" id="day4_starting_time">
+                <option value="">......</option>
+                <option value="8am">8am</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12pm">12pm</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+            </select>
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Ending Time</label>
+            <select name="" id="day4_closing_time">
+                <option value="">.....</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12am">12am</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+                <option value="5pm">5pm</option>
+            </select>
+        </div>
+    </div>  <!-- the the user click on the day 4 option ending tag -->
+
+
+
+        <div class="btn btn-sm btn-dark ms-4 mt-1" >
+            <input type="checkbox" name="day5" onclick="openDay5()" id="day5">
+            <label for="Days">Day 5</label>
+        </div>
+
+        <!-- the the user click on the day 1 option -->
+    <div id="day5CheckBox">
+        <div class="input-user-control">
+            <label for="date">Select Date</label>
+            <input type="date" name="Stating_Date" id="day5_starting">
+        </div>
+
+        <div class="input-user-control">
+            <label for="hours">How Many Hours</label>
+            <input type="number" min="1" max="9" placeholder="in range of 9hours" id="howManyHour4">
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Stating Time</label>
+            <select name="" id="day5_starting_time">
+                <option value="">......</option>
+                <option value="8am">8am</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12pm">12pm</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+            </select>
+        </div>
+        <div class="input-user-control">
+            <label for="hours">Ending Time</label>
+            <select name="" id="day5_closing_time">
+                <option value="">.....</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+                <option value="12am">12am</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+                <option value="5pm">5pm</option>
+            </select>
+        </div>
+    </div> 
+
+</section>
+
+                            <!-- Daily plan, weekly plan and monthly plan -->
+
+                            <Section id="dwmPlan">
+                                <section id="choosedays">
+                                    <p class="mx-4">Note: Per day is &#8358;1500 on Hot Desk Plan While Its &#8358;2,500 Per day on WorkStation plan. </p>
+                                    <div class="input-user-control">
+                                        <label for="startingDate">Select your starting date</label>
+                                        <input type="date" name="" id="daily_starting_day">
+                                    </div>
+
+                                    <div class="input-user-control">
+                                        <label for="days">How many day would you like to spend? </label>
+                                    
+                                        <select name="" id="how_Many_Days">
+                                            <option value="">.......</option>
+                                            <option value="1days">1 Day</option>
+                                            <option value="2days">2 Days</option>
+                                            <option value="3days">3 Days</option>
+                                            <option value="4days">4 Days</option>
+                                            <option value="5days">5 Days</option>
+                                            <option value="6days">6 Days</option>
+                                            <option value="7days">7 Days</option>
+                                            <option value="8days">8 Days</option>
+                                            <option value="9days">9 Days</option>
+                                            <option value="10days">10 Days</option>
+                                            <option value="11days">11 Days</option>
+                                            <option value="12days">12 Days</option>
+                                            <option value="13days">13 Days</option>
+                                            <option value="14days">14 Days</option>
+                                            <option value="15days">15 Days</option>
+                                            <option value="16days">16 Days</option>
+                                            <option value="17days">17 Days</option>
+                                            <option value="18days">18 Days</option>
+                                            <option value="19days">19 Days</option>
+                                            <option value="20days">20 Days</option>
+                                            <option value="21days">21 Days</option>
+                                            <option value="22days">22 Days</option>
+                                            <option value="23days">23 Days</option>
+                                            <option value="24days">24 Days</option>
+                                            <option value="25days">25 Days</option>
+                                            <option value="26days">26 Days</option>
+                                            <option value="27days">27 Days</option>
+                                            <option value="28days">28 Days</option>
+                                            <option value="29days">29 Days</option>
+                                            <option value="30days">30 Days</option>
+                                            <option value="31days">31 Days</option>
+                                        </select>
+                                </div>
+
+                                <div class="row">
+                                        <label for="Choose Day" class="ms-4 mb-2 mt-4">Select the days here.</label>
+                                        <br>
+                                        <div class="btn-control">
+                                            <input type="button" class="btn calender" value="1">
+                                            <input type="button" class="calender" value="2">
+                                            <input type="button" class="calender" value="4">
+                                            <input type="button" class="calender" value="5">
+                                            <input type="button" class="calender" value="6">
+                                            <input type="button" class="calender" value="7">
+                                            <input type="button" class="calender" value="8">
+                                            <input type="button" class="calender" value="9">
+                                            <input type="button" class="calender" value="10">
+                                            <input type="button" class="calender" value="11">
+                                            <input type="button" class="calender" value="12">
+                                            <input type="button" class="calender" value="13">
+                                            <input type="button" class="calender" value="14">
+                                            <input type="button" class="calender" value="15">
+                                            <input type="button" class="calender" value="16">
+                                            <input type="button" class="calender" value="17">
+                                            <input type="button" class="calender" value="18">
+                                            <input type="button" class="calender" value="19">
+                                            <input type="button" class="calender" value="20">
+                                            <input type="button" class="calender" value="21">
+                                            <input type="button" class="calender" value="22">
+                                            <input type="button" class="calender" value="23">
+                                            <input type="button" class="calender" value="24">
+                                            <input type="button" class="calender" value="25">
+                                            <input type="button" class="calender" value="26">
+                                            <input type="button" class="calender" value="27">
+                                            <input type="button" class="calender" value="28">
+                                            <input type="button" class="calender" value="29">
+                                            <input type="button" class="calender" value="30">
+                                            <input type="button" class="calender" value="31">
+                                        </div>
+                                    </div>
+                                    <input type="text" name="" id="receive"> <!--Receiving data from the buttons-->
+                                </section><!--Daily plan closing section-->
+
+                                    <!-- Weekly plan -->
+
+                                    <section id="chooseweekly">
+                                        <p class="mx-4">Note: Per week is &#8358;6,500 on Hot Desk Plan, While Its &#8358;10,500 Per week on WorkStation plan. </p>
+                                        <div class="input-user-control">
+                                            <label for="how to come">How do you want to come?</label>
+                                            <select name="" id="how_To_Come">
+                                                <option value=" ">....</option>
+                                                <option value="Monday - Friday">Monday - Friday</option>
+                                                <option value="Tuesday - Monday">Tuesday - Monday</option>
+                                                <option value="Wednesday - Tuesday">Wednesday - Tuesday</option>
+                                                <option value="Thursday - Wednesday">Thursday - Wednesday</option>
+                                                <option value="Friday - Thursday">Friday - Thursday</option>
+                                            </select>
+                                        </div>
+        
+                                        <div class="input-user-control">
+                                            <label for="Numbers of weeks">How many week do you want?</label>
+                                            <select name="" id="how_Many_Weeks">
+                                                <option value=" ">....</option>
+                                                <option value="Monday - Friday">1 Week</option>
+                                                <option value="Tuesday - Wednesday">2 Weeks</option>
+                                                <option value="Wednesday - Thursday">3 Weeks</option>
+                                                <option value="Thursday - Friday">4 Weeks</option>
+                                            </select>
+                                        </div>
+                                    </section><!--Weekly plan closing section-->
+    <!-- monthly -->
+    <section id="choosemonthly">
+        <p class="mx-4">Note: Per Month is &#8358;20,000 on Hot Desk Plan, While Its &#8358;35,000 Per Month on WorkStation plan and &#8358;60,000 per month on Smart Office plan.</p>
+        <div class="input-user-control">
+            <label for="Numbers of weeks">How many month do you want? </label>
+            <select name="" id="how_Many_month">
+                <option value="">....</option>
+                <option value="1month">1 Month</option>
+                <option value="2months">2 Months</option>
+                <option value="3months">3 Months</option>
+                <option value="4months">4 Months</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div class="input-user-control">
+            <label for="how to come">Select starting date</label>
+            <input type="date" name="" id="starting_Date">
+        </div>
+    </section>
+
+    <a class="prev_my" onclick="plusSlides(-1)">❮</a>
+                <a class="next_my" onclick="plusSlides(1)">❯</a>
+
+
+                <div class="my_S_lides my_fade">
+                    <section id="about">
+                        <div id="second_banner">
+                            <div class="row secondRow">
+                                <div class="col-lg-8 col-md-7 col-sm-12 col-12">
+                                    <div class="firstcol">
+                                        <h1 class="h1">Hi, we're the <span class="secondBrand">brand service</span> arm of Marketleag </h1>
+                                        <p class="bannerP">We supporting people like you to make smart decision about attracting more audience online, hiring freelancer, and choosing the right expert to help your business grow. </p>
+                                    <button onclick="location.href='./contact.html'" class="btn px-2 btn-lg btn-hero btn-hero3 shadow-none">Connect with us</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+                                    <div class="firstcol bannercontact">
+                                        <img src="./asset/About-us-page-pana.png" alt="About us image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>    
+                </div> <!--Second slide show ending tag-->
+                <div class="slide_show-container">
+                    <div class="my_S_lides my_fade">
+</body>
+</html>

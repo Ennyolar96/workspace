@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  -->
+    <form onsubmit="return sendData()">
+        <label for="">name</label>
+        <input type="text" name="" id="name" value="">
+        <label for="">age</label>
+        <input type="text" name="" id="age">
+        <input type="submit" value="submit">
+        <p id="demo"></p>
+    </form>
+    
+    <div class="d-flex justify-content-center">
+        <div id="loading" style="display: none;">
+            <span class="spinner-grow spinner-border-sm my-5" role="status">Please wait</span>
+        </div>
+    </div>
+
+    <script>
+        function sendData(){
+            document.getElementById('loading').style.display = 'block';
+            var data = new FormData();
+            data.append("name", document.getElementById("name").value);
+            data.append("email", document.getElementById("age").value);
+
+            fetch('https://formsubmit.co/ajax/ennyolar1996@gmail.com', {
+                method: "POST",
+                body: data
+            })
+
+            .then((result) => {
+                if(result.status != 200){
+                    throw new Error(document.getElementById('demo').innerHTML = "bad server Response");
+                }
+                return result.text();
+            })
+            
+
+            .then((Response) => {
+                if (Response) {
+                hideloader();
+            }
+                document.getElementById('demo').innerHTML = "form submitted successful"
+                console.log(Response);
+            })
+            
+
+            .catch((error) => {
+                console.log(error);
+            });
+            function hideloader() {
+            document.getElementById('loading').style.display = 'none';
+        }
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/workspace/css/space.css">
+    <!-- google font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font-awesome links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+     <!-- site icon -->
+     <link rel="icon" href="/workspace/image/new-png-mleage-mark-2-6.png" type="image/gif" sizes="16x16">
+     <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Booking | Book for reading and working environment</title>
+</head>
+<body>
+    <!-- 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 -->
+
+    <div class="container-fluid">
+        <div class="overallcontainer">
+            <div class="side_bar">
+                <img src="/workspace/image/logo white version.png" alt="Logo">
+                <p>Booking</p>
+            </div>
+            <section id="bringing">
+                <section id="header" class="row row-cols-2 p-2">
+                    <div class="inlin">
+                        <span id="current"class="current ms-2"></span>
+                         <span id="currentTime" class="current ms-2"></span>
+                    </div>
+                   
+                     <a href="#" class="btn btn-sm space ms-auto me-5">Status</a>
+
+                </section> <!--Headers-->
+
+                <!-- the bringing of the form -->
+                <section id="message">
+                    <p id="welcome"></p>
+                </section>
+
+                <!-- Getting the non booked days -->
+
+                <section id="search">
+                    <a href="./notbooked.html" target="_blank" class="ms-4 m-2 btn">Click here to see the list of available space you can book for.</a>
+                </section>
+
+
+                <section id="forminput">
+                    <div class="formgrouping">
+                        <h2>New Booking</h2>
+
+                        <button class="tablink" onclick="openPage('chooseHouly', this, 'black')" id="defaultOpen">Hourly</button>
+                        <button class="tablink" onclick="openPage('chooseDaily', this, 'black')">Daily</button>
+                        <button class="tablink" onclick="openPage('chooseWeekly', this, 'black')">Weekly</button>
+                        <button class="tablink" onclick="openPage('chooseMontly', this, 'black')">Monthly</button>
+            
+
+                        <section id="chooseHouly" class="tabcontent">
+                            <form onsubmit="return hourlyFormSend(event)">
+                                <div class="m-4">
+                               
+                                    <label for="" class="form-label mt-4">Choose date:</label>
+                                    <input type="date" name="" class="form-select shadow-none" id="hourly_date_selector">
+                                    <small class="small" id="hourly_empty_Space">Note: you can select multiple days</small>
+                                    <div class="position-relative">
+                                        <span class="bg-dark text-white cancelbtn" title="Clear all" onclick="hourlyClearAll()">&times;</span>
+                                        <input type="text" name="date" class="form-select shadow-none mt-3" id="hourly_date">
+                                        <small class="small" id="hourly_empty_Space">Your selected days shows here</small>
+                                    </div>
+    
+                                    <label for="hours" class="form-label mt-3">Stating Time</label>
+                                    <select name="start_time" required class="form-select shadow-none" id="start_time">
+                                        <option selected value="">Time</option>
+                                        <option value="8">8am</option>
+                                        <option value="9">9am</option>
+                                        <option value="10">10am</option>
+                                        <option value="11">11am</option>
+                                        <option value="12">12pm</option>
+                                        <option value="13">1pm</option>
+                                        <option value="14">2pm</option>
+                                        <option value="15">3pm</option>
+                                    </select>
+                                    <small class="small" style="display: block;" id="start_time_error"></small>
+    
+                                    <label for="hours" class="form-label mt-1">How Many Hours</label>
+                                    <input type="number" min="1" max="9" placeholder="in range of 9hours" class="form-control shadow-none" id="num_hours">
+                                    <small class="small" id="hourly_pass"></small>
+
+                                    <label for="Space_type" class="form-label">Space type</label>
+                                    <select name="space_type" class="form-select shadow-none" required id="hourly_space_type">
+                                        <option value="" selected disabled>Space Type</option>
+                                    </select>
+                                    <small class="small" id="theSpace_type"></small>
+
+                                    <input type="text" name="space_id" disabled hidden id="hourly_available_space">
+                                </div>
+    
+                                <!-- confirmation button -->
+                                <a class="btn btn-lg btn-d m-3" id="" onclick="hourly_confirm()">Confirm</a>
+      
+                                <div class="confirm_box" id="hourly_confirm_box">
+                                    <div id="hourly_weekend_Error">
+                                       <center>
+                                        <p>Sorry booking can only be on weekdays</p>
+                                        <a class="btn btn-dark btn-sm error_btn" onclick="hourly_hide_ConfirmBox()">OK</a>
+                                       </center>
+                                    </div>
+                                    <div id="hourly_bankInfo">
+                                        <h4>Hi dear user,</h4>
+                                        <p> You are to pay &#8358;<span id="hourly_payment"></span> &nbsp; to the company account</p>
+                                        <p>Kindly pay into the following bank account and send a proof of payment <a href="mailto:mypay4space@marketleag.com">here.</a></p> 
+                                        <p><b>Name:</b>&nbsp; Thomas Bamifewe <span> <br> <b>Account:</b> &nbsp; <input type="text" name="" readonly value="2374337371" id="copyText">
+                                        <a class="copybtn" title="copy account number"><i class="fa fa-copy"></i></a> &nbsp; </span> <br>
+                                        <span><b>Bank Name:</b> &nbsp; Zenith Bank</span></p>
+                                        <p>Kindly note that your booking will not be scheduled until your payment is confirmed with us.</p>
+                                        <div class="buttons">
+                                        <button type="reset" class="btn btn-sm btn-out-d the-btn" onclick="hourly_closeDiv()">Cancel</button>
+                                        <button type="submit" class="btn btn-sm btn-d m-1 the-btn">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+
+                        <section id="chooseDaily" class="tabcontent">
+                            <form onsubmit="return sendData()">
+                                
+                                <div class="m-4">
+                                    <label for="" class="form-label mt-4">How many day would you like to spend? </label>
+                                    <input type="date" name="" class="form-control mb-2 shadow-none" id="date-selector">
+                                    <small class="small" id="hourly_empty_Space">Note: you can select multiple days</small>
+                                    <div class="position-relative">
+                                        <span class="bg-dark text-white cancelbtn" title="Clear all" onclick="clearAll()">&times;</span>
+                                        <input type="text" name="" class="form-control  mt-3 shadow-none" id="date" placeholder="Note: Per day is &#8358;1500 on Hot Desk Plan While Its &#8358;2,500 Per day on WorkStation plan">
+                                    </div>
+                                    <small class="text-danger small" style="display:block;"  id="arrError"></small>
+
+                                    <label for="space" class="form-label mt-1">Space type</label>
+                                    <select name="space_type"  class="form-select shadow-none" id="spaces">
+                                        <option value="" selected disabled>Select space</option>
+                                    </select>
+                                    <small class="text-danger small" id="spaceError"></small>
+
+                                    <input type="text" name="space_id" hidden id="available_spaces" disabled>
+                                </div>
+  
+                                <!-- confirmation message and error checking for user -->
+
+                                <a class="btn btn-lg btn-d m-3" id="check" onclick="confirmCheck()">Confirm</a>
+  
+                                <div class="confirm_box" id="confirm_box">
+                                    <div id="weekendError">
+                                        <center>
+                                            <p>Sorry booking can only be on weekdays</p>
+                                            <a class="btn btn-dark btn-sm" onclick="hideConfirmBox()">OK</a>
+                                        </center>
+                                    </div>
+                                    <div id="bankInfo" class="bankInfo">
+                                        <h4>Hi dear user,</h4>
+                                        <p>Kindly pay into the following bank account and send a proof of payment <a href="mailto:mypay4space@marketleag.com">here.</a></p> 
+                                        <p><b>Name:</b>&nbsp; Thomas Bamifewe <span> <br> <b>Account:</b> &nbsp; <input type="text" name="" readonly value="2374337371" id="dailycopyText">
+                                        <a class="dailycopybtn" title="copy account number"><i class="fa fa-copy"></i></a> &nbsp; </span> <br>
+                                        <span><b>Bank Name:</b> &nbsp; Zenith Bank</span></p>
+                                        <p>Kindly note that your booking will not be scheduled until your payment is confirmed with us.</p>
+                                        <div class="buttons">
+                                            <button type="reset" class="btn btn-sm btn-out-d the-btn" onclick="closeDiv()">Cancel</button>
+                                            <button type="submit" class="btn btn-sm btn-d m-1 the-btn">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+
+                        <div id="chooseWeekly" class="tabcontent">
+                            <p>Adding Soon</p>
+            
+                        </div>
+
+                        <div id="chooseMontly" class="tabcontent">
+                           <p>Adding Soon!!</p>
+            
+                        </div>
+
+                        <!-- The loader  -->
+                        <div class="divresult" id="div_result">
+                            <div id="loading" class="loading"></div>
+                            <img src="/workspace/image/new-png-mleage-mark-2-6.png" alt="" id="spinImage" class="spinImage">
+                        </div>
+
+                    </div><!-- form grouping closing tag-->
+                </section><!--Form input closing tag-->
+            </section><!--bringing section closing tag-->
+        </div><!--Over all Container closing tag-->
+    </div> <!--Container fluid closing tag-->
+    <script src="/js/hourly.js"></script>
+    <script src="/js/daliy.js"></script>
+    <script>
+        
+
+
+        
+        // // give information when the options are click
+
+        // function chooseSpace(){
+        //     var available_option = document.querySelector('.available_option');
+        //     var availableValue = available_option.value
+        //     console.log(availableValue)
+
+        //     if(availableValue === "Hot_Desk"){
+        //         document.getElementById('giveInfo').innerHTML = " "
+        //     }
+
+        //     if(availableValue === "Work_station"){
+        //         document.getElementById('giveInfo').innerHTML = "Only Daily, Weekly and Monthly are Available on this plan."
+        //     }
+
+        //     if(availableValue === "Smart_office"){
+        //         document.getElementById('giveInfo').innerHTML = "Only Weekly and Monthly are Available on this plan."
+        //     }
+            
+        // }
+
+
+       
+
+   
+            
+    </script>
+    <script src="/js/space.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

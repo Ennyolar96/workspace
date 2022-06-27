@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/workspace/css/space.css">
+    <!-- google font  links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font-awesome links -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Booking | Book for reading and working environment</title>
+</head>
+<style>
+    .adminAside{
+        position:fixed;
+        left:0;
+        top:0;
+        background-color:#222;
+        width: 200px;
+        height: 100%;
+    }
+    .adminAsideDiv{
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-top: 20px;
+    }
+       
+.adminAsideDiv > a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    color: #f0f0f0;
+}
+.adminOpenDiv{
+    background-color: #222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.open{
+    display: block;
+    margin-right: 40px;
+    text-align: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.closeBar{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    display: none;
+}
+@media screen and (max-width:600px) {
+    .adminpage{
+        margin:40px 0 0 0;
+    }
+    .adminOpenDiv{
+        display: block;
+    }
+    .closeBar{
+        display: block;
+    }
+    .adminAsideDiv{
+        margin-top: 80px;
+    }
+    .adminAside{
+        width: 0;
+    }
+}
+</style>
+<body class="logincolor">
+    <div class="container-fluid">
+        <div class="overallcontainer">
+
+            <div class="adminOpenDiv"> 
+                <span class="open text-white" onclick="openNav()">&#9776;</span>
+            </div>
+                  
+            <aside  id="aside" class="adminAside">
+                <a href="#" onclick="closeBar()" class="closeBar">&times;</a>
+                <div class="adminAsideDiv">
+                    <a href="./admin.html">Overview</a>
+                    <a href="./allbooking.html">All booked days</a>
+                    <a href="./bookedforsingleday.html">Single day book</a>
+                    <a href="./workspacetype.html">Workspace Types</a>
+                </div>
+            </aside>
+            <section id="adminpage">
+               <div class="adminpage">
+                   <div class="container">
+                        <div class="admincontainer row row-cols-2 mt-3">
+                            <p class="id mt-4">ID Number: <span id="id_number">WS-204</span></p>
+                            <p class="fullname mt-4">Name: <span id="the_name">Ololade Semiu</span></p>
+                            <p class="ademail">Email: <a href="#" class="email">ololadesemiu@gmail.com</a></p>
+                            <p class="phnum">Phone Number:  <a href="#">08100 0000 000</a></p>
+                            <p class="stday">Starting Date:  <span id="stdate">20:5:2022</span></p>
+                            <p class="sitnum">Sit Number: <span id="the_sit">SitNumber 2</span></p>
+                            <p class="howhour">hours: <span id="the_hours">2pm - 3pm</span></p>
+                            <p class="howdays">Number of Day(s): <span id="the_day">2days</span></p>
+                            <p class="howmonth">Number of Month(s): <span id="the_month">1 month</span></p>
+                            <button class="btn btn-sm me-3 ms-2 btn-d adminbtn">Cancel</button>
+                            <button class="btn btn-sm btn-out-d adminbtn">Approve</button>
+                        </div>
+        
+                        <div class="admincontainer row row-cols-2 mt-3">
+                            <p class="id mt-4">ID Number: <span id="id_number">WS-204</span></p>
+                            <p class="fullname mt-4">Name: <span id="the_name">Ololade Semiu</span></p>
+                            <p class="ademail">Email: <a href="#" class="email">ololadesemiu@gmail.com</a></p>
+                            <p class="phnum">Phone Number:  <a href="#">08100 0000 000</a></p>
+                            <p class="stday">Starting Date:  <span id="stdate">20:5:2022</span></p>
+                            <p class="sitnum">Sit Number: <span id="the_sit">SitNumber 2</span></p>
+                            <p class="howhour">hours: <span id="the_hours">2pm - 3pm</span></p>
+                            <p class="howdays">Number of Day(s): <span id="the_day">2days</span></p>
+                            <p class="howmonth">Number of Month(s): <span id="the_month">1 month</span></p>
+                            <button class="btn btn-sm me-3 ms-2 btn-d adminbtn">Cancel</button>
+                            <button class="btn btn-sm btn-out-d adminbtn">Approve</button>
+                        </div>
+        
+                        <div class="admincontainer row row-cols-2 mt-3">
+                            <p class="id mt-4">ID Number: <span id="id_number">WS-204</span></p>
+                            <p class="fullname mt-4">Name: <span id="the_name">Ololade Semiu</span></p>
+                            <p class="ademail">Email: <a href="#" class="email">ololadesemiu@gmail.com</a></p>
+                            <p class="phnum">Phone Number:  <a href="#">08100 0000 000</a></p>
+                            <p class="stday">Starting Date:  <span id="stdate">20:5:2022</span></p>
+                            <p class="sitnum">Sit Number: <span id="the_sit">SitNumber 2</span></p>
+                            <p class="howhour">hours: <span id="the_hours">2pm - 3pm</span></p>
+                            <p class="howdays">Number of Day(s): <span id="the_day">2days</span></p>
+                            <p class="howmonth">Number of Month(s): <span id="the_month">1 month</span></p>
+                            <button class="btn btn-sm me-3 ms-2 btn-d adminbtn"> Cancel</button>
+                            <button class="btn btn-sm btn-out-d adminbtn">Approve</button>
+                        </div>
+        
+                        <div class="admincontainer row row-cols-2 mt-3">
+                            <p class="id mt-4">ID Number: <span id="id_number">WS-204</span></p>
+                            <p class="fullname mt-4">Name: <span id="the_name">Ololade Semiu</span></p>
+                            <p class="ademail">Email: <a href="#" class="email">ololadesemiu@gmail.com</a></p>
+                            <p class="phnum">Phone Number:  <a href="#">08100 0000 000</a></p>
+                            <p class="stday">Starting Date:  <span id="stdate">20:5:2022</span></p>
+                            <p class="sitnum">Sit Number: <span id="the_sit">SitNumber 2</span></p>
+                            <p class="howhour">hours: <span id="the_hours">2pm - 3pm</span></p>
+                            <p class="howdays">Number of Day(s): <span id="the_day">2days</span></p>
+                            <p class="howmonth">Number of Month(s): <span id="the_month">1 month</span></p>
+                            <button class="btn btn-sm me-3 ms-2 btn-d adminbtn"> Cancel</button>
+                            <button class="btn btn-sm btn-out-d adminbtn">Approve</button>
+                        </div>
+                   </div>
+               </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        function openNav(){
+            document.getElementById('aside').style.width = "100%" 
+        }
+        function closeBar(){
+           document.getElementById('aside').style.width = "0px" 
+        }
+    </script>
+</body>
+</html>

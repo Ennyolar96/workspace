@@ -1,0 +1,164 @@
+
+            // var howManyHour = document.getElementById("howManyHour").value
+            // for(var i = 0; i < howManyHour.length; i++){
+            //     var thevalueof = 0
+            //         if(howManyHour[i] === "9"){
+            //             thevalueof = 1500
+            //         }
+            //         else{
+            //             thevalueof = howManyHour[i] * 200;
+            //         }
+            //     console.log(thevalueof)
+            // }
+
+            // var howManyHour1 = document.getElementById("howManyHour1").value
+            // for(var i = 0; i < howManyHour1.length; i++){
+            //     var thevalueof1 = 0
+            //         if(howManyHour1[i] === "9"){
+            //             thevalueof1 = 1500
+            //         }
+            //         else{
+            //             thevalueof1 = howManyHour1[i] * 200;
+            //         }
+            //     console.log(thevalueof1)
+            // }
+
+            // var howManyHour2 = document.getElementById("howManyHour2").value
+            // for(var i = 0; i < howManyHour2.length; i++){
+            //     var thevalueof2 = 0
+            //         if(howManyHour2[i] === "9"){
+            //             thevalueof2 = 1500
+            //         }
+            //         else{
+            //             thevalueof2 = howManyHour2[i] * 200;
+            //         }
+            //     console.log(thevalueof2)
+            // }
+
+            // var howManyHour3 = document.getElementById("howManyHour3").value
+            // for(var i = 0; i < howManyHour3.length; i++){
+            //     var thevalueof3 = 0
+            //         if(howManyHour3[i] === "9"){
+            //             thevalueof3 = 1500
+            //         }
+            //         else{
+            //             thevalueof3 = howManyHour3[i] * 200;
+            //         }
+            //     console.log(thevalueof3)
+            // }
+
+            // var howManyHour4 = document.getElementById("howManyHour4").value
+            // for(var i = 0; i < howManyHour4.length; i++){
+            //     var thevalueof4 = 0
+            //         if(howManyHour4[i] === "9"){
+            //             thevalueof4 = 1500
+            //         }
+            //         else{
+            //             thevalueof4 = howManyHour4[i] * 200;
+            //         }
+            //     console.log(thevalueof4)
+            // }
+            // var totalAmount = thevalueof + thevalueof1 + thevalueof2 + thevalueof3 + thevalueof4
+
+            // console.log(totalAmount)
+
+
+
+            
+
+// check.addEventListener("click", function(){
+//         var check = document.getElementById("check");
+//         var result = document.getElementById("result");  
+//         var confirm_box = document.getElementById("confirm_box")
+
+//         // displaying the pop up box on confirm click
+//         confirm_box.style.display = "block";
+
+//         // loop through to know the selected time.
+//         for(var i = 0; i < document.querySelectorAll('input[type=checkbox]').length; i++){
+//             var price = 1500
+
+//             // function to add up the price
+//             function addprice(price, i){
+//                 return (i * price) + price;
+//             }
+
+//             // display the amount to pay after calculating the price
+//             var cxh = document.getElementById("cxhbox");
+//             cxh.innerHTML += (document.querySelectorAll('input[type=checkbox][name=resumeTime]:checked')[i].value) + " ";
+//             document.getElementById('getprice').innerHTML = "You are to Pay " + " " + addprice(1500, i) + " " + "To Secure The place";
+//         }  
+//     })
+
+    // closing the pop up box when the cancel button is click
+
+    // function closeDiv(){
+    //     // var check = document.getElementById("check");
+    //     // var result = document.getElementById("result");
+    //     var confirm_box = document.getElementById("confirm_box");
+
+    //     if(confirm_box.style.display === "block"){
+    //         confirm_box.style.display = "none"
+    //         // clear the selected element on cancel click
+    //         document.getElementById('getprice').innerHTML = " ";
+    //         document.getElementById("cxhbox").innerHTML = " ";
+    //     }
+        
+    // } 
+
+    // Allow user to select only one checked box 
+
+    //             $(document).ready(function(){
+    //     $('.check').click(function() {
+    //         $('.check').not(this).prop('checked', false);
+    //     });
+    // });
+
+
+
+    // booking section js
+
+
+            // function checkOption(){
+        //     var seeSelect = document.querySelector('.make_option');
+        //     var haveValue = seeSelect.value;
+        //     console.log(haveValue);
+          
+
+        //     if(haveValue === "Hours"){
+        //         document.getElementById("hourlyChoices").style.display = "block";
+        //     }else{
+        //         document.getElementById("hourlyChoices").style.display = "none";
+        //     }
+    
+        //     if(haveValue === "Daily"){
+        //         document.getElementById("choosedays").style.display = "block";
+        //     }else{
+        //         document.getElementById("choosedays").style.display = "none";
+        //     }
+
+        //     if(haveValue === "Weekly"){
+        //         document.getElementById("chooseweekly").style.display = "block";
+        //     }else{
+        //         document.getElementById("chooseweekly").style.display = "none";
+        //     }
+
+        //     if(haveValue === "Monthly"){
+        //         document.getElementById("choosemonthly").style.display = "block";
+        //     }else{
+        //         document.getElementById("choosemonthly").style.display = "none";
+        //     }
+        // } 
+
+        // var numberOfDays = document.querySelectorAll(".calender").length;
+        
+        // for(var i = 0; i < numberOfDays; i++){
+        //     var receive = document.getElementById("receive");
+        //     document.querySelectorAll(".calender")[i].addEventListener('click', function(){
+        //        this.style.backgroundColor = "blue"
+        //         var amClick = this.value;
+        //         receive.value += amClick + " ";
+        //         console.log(amClick)
+        //     })
+            
+        // }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="" id="userName">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="" id="passWord">
+        </div>
+        <br>
+        <button type="submit" id="button">Login</button>
+    </form>
+    <script>
+        const logForm = {
+            email:document.querySelector("#userName"),
+            password: document.querySelector("passWord"),
+            submit: document.querySelector("#button")
+        };
+        let button = logForm.submit.addEventListener("click", (e) => {
+            e.preventDefault();
+            const login = http;
+
+            fetch(login, {
+                method: "POST",
+                headers: {
+                    Accept: "application/json, text/plain, */*",
+                    "content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: logForm.email.value,
+                    password: logForm.password.value,
+                }),
+            })
+            .then((Response) => Response.json())
+            .then((data) => {
+                console.log(data)
+
+                if(dat.error){
+                    alert("Error Occur")
+                }else{
+                    window.open(
+                        "booking.html"
+                    );
+                }
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        });
+    </script>
+</body>
+</html>

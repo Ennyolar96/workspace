@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: hsl(0, 0%, 89%);
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f73;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.overAllContainer{
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* headers */
+.collapse .navbar-nav .nav-item .nav-link{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+}
+.collapse .navbar-nav .nav-item .nav-link:hover{
+    color: #f73;
+}
+.btn:active, .btn:focus{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:none!important;
+}
+.navbar-toggler{
+    outline: 0!important;
+    -webkit-box-shadow:none!important;
+    box-shadow:0 0 1px 1px #f74!important;
+}
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+} 
+.dropdown-menu .dropdown-item:hover{
+    color: #f73;
+    background-color: transparent;
+}
+.dropdown-menu{
+    border-top: 2px solid#f73;
+} 
+
+.btn-getstarted{
+    background-color: #f73;
+    color: #fff;
+}
+.btn-getstarted:hover{
+    background-color: #111;
+    color: #fff;
+}
+.navbar-brand img{
+    margin-top: -10px;
+    width: 200px;
+    height: 40px;
+}
+
+
+
+/* banner sections */
+#bannerbg{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./asset/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+    height: 700px;
+    margin: 0 -12px;
+}
+
+.banner_1 > h1{
+    font-size: 3em;
+    color: #fff;
+    margin-top: 160px;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+.banner_1 > p{
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 450;
+    line-height: 1.5;
+}
+
+/* sections */
+#subPlan, #benefit, #let_match,#valuePropose,#HowItWork, #registration{
+    margin: 100px -12px 0;
+}
+h2{
+    font-size: 3rem;
+    margin:10px 10px;
+    line-height: 1.5;
+}
+h3{
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin:10px 10px 30px;
+}
+h5{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #f73;
+}
+h6{
+    font-weight: bold;
+}
+p{
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+/* value propose */
+.valueImage > img{
+    width: 100%;
+    height: 500px;
+}
+/* .howItWorkschildren {
+    margin-bottom: 100px;
+} */
+#HowItWork{
+    padding: 5rem 0 10rem;
+}
+.howItWorkschildren  h3{
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+/* how it work */
+.howItWorkschildren > p{
+    color: #fff;
+}
+.getshow1{
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 4px 14px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 10px;
+    background-color: #fff;
+    /* position: relative; */
+    /* height: 500px; */
+    /* perspective: 500px; */
+}
+.showcontainer{
+    margin-top: 60px;
+}
+.show{
+    position: relative;
+}
+.fa-arrow-down {
+   position: absolute;
+   top: 5px;
+   right: 30px;
+   color: #f73;
+}
+
+/* rotate text */
+ 
+/* .getshow1 .getshowp{
+    width: 100%;
+    height: 50%;
+    padding: 5% 8%;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+    rotateY(90deg);
+    transform-origin:50%;
+    background: rgba(255, 255, 255, .9);
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    color: red;
+}
+
+.getshow1:hover .getshowp{
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+} */
+
+/* Price Section */
+.sub-plan > h3{
+    padding: 0;
+    margin: 0 0 10px;
+}
+.sub-plan > p{
+    margin-bottom: 40px;
+}
+.priceDiv{
+    box-sizing: border-box;
+    height: 700px;
+}
+.priceDiv > h4{
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.get1_btn{
+    color: #86f;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.get1_btn:hover{
+background-color: #86f;
+color: #fff;
+}
+.get2_btn{
+    color: #f73;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.get2_btn:hover{
+    background-color: #f73;
+    color: #fff;
+}
+.get3_btn{
+    color: #4af;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.get3_btn:hover{
+    background-color: #4af;
+    color: #fff;
+}
+
+.get4_btn{
+    color: #678;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+.get4_btn:hover{
+    background-color: #678;
+    color: #fff;
+}
+.pricebtn > a{
+    display: block;
+}
+
+
+.pricebtn{
+    margin: 75px 0 100px; 
+}
+
+/* .probtn{
+    margin: 75px 0 100px; 
+} */
+.pricetag{
+    margin: 35px 0 0;
+}
+/* let match */
+/* #let_match{
+   height: 700px;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+} */
+.letmatch{
+    margin-top:200px ;
+}
+/* registration  */
+#registration{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("./asset/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+}
+textarea{
+    min-height: 200px;
+    max-height: 100px;
+}
+.form-span{
+    color: red;
+}
+.sub-btn{
+    width: 100%;
+}
+
+/* footer */
+
+#footer{
+    margin:100px -12px 0;
+    height: 700px;
+}
+.footer{
+    display: block;
+    margin: 100px 0;
+}
+.footer h2{
+    text-align: center;
+    font-weight: 600;
+    margin: 20px 0;
+    
+}
+.footer h4{
+    text-align: center;
+    font-size: 1em;
+}
+/* address */
+.address1{
+    position: relative;
+    display: none;
+}
+.address2{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #f73;
+    position: absolute;
+}
+.address2 p{
+    font-size: 1rem;
+    color: #000;
+    font-weight: 600;
+}
+.address2 small{
+    margin-left: 10px;
+}
+.address2 a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+}
+a.closeAddress{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.social-icon a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.btn-com2{
+    padding: 10px 20px;
+}
+.private a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+.private a:hover{
+    color: #f73;
+}
+.private{
+    margin-top: 5px;
+}
+
+/* @media screen and (max-width:1200px) {
+    .getshow1{
+        height: 450px;
+    }   
+}
+
+@media screen and (max-width:1000px) {
+    .getshow1{
+        height: 310px;
+    } 
+} */
+
+@media screen and (max-width:900px) {
+    h2{
+        font-size: 2.5em;
+    }  
+}
+@media screen and (max-width:800px) {
+    /* .getshow1{
+        height: 440px;
+    } */
+    .letmatch{
+        margin-top:50px ;
+    }
+    #registration{
+        padding-bottom: 100px;
+    }
+}
+@media screen and (max-width:760px) {
+    .regRow{
+        flex-direction: column-reverse;
+    }
+    .letmatch{
+        margin:50px 0;
+    }
+}
+@media screen and (max-width:550px) {
+    /* .getshow1{
+        height: 200px;
+    } */
+    h3{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:500px) {
+    #bannerbg{
+        height: 740px;
+    }
+    /* .getshow1{
+        height: 260px;
+    } */
+    #footer{
+        height: 850px;
+    }
+    .footerbtn{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:400px) {
+    /* .getshow1{
+        height: 300px;
+    } */
+    #bannerbg{
+        height: 700px;
+    }
+    .banner_1 > h1{
+        font-size: 2.2em;
+    }
+    .banner_1 > p{
+        font-size: 1.1em;
+        margin-left: 0;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.8rem;
+    }
+      /* value propose */
+      .valueImage > img{
+        width: 100%;
+        height: 400px;
+    }
+}
+@media screen and (max-width:250px) {
+    .banner_1 > h1{
+        font-size:2em ;
+    }
+    /* .getshow1{
+        height: 500px;
+    } */
+    
+    /* value propose */
+    .valueImage > img{
+        width: 100%;
+        height: 300px;
+    }
+}

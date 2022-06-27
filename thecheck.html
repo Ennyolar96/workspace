@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>booking form</title>
+  <style>
+    label, input {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="https://workspaceapi.herokuapp.com/api/bookings/new" method="post">
+
+      <label for="date-selector">Choose date:</label>
+      <input type="date" name="date-selector" id="date-selector">
+
+      <input type="text" name="date" id="date">
+
+      <label for="booking-types">Booking Types:</label>
+      <select name="booking-types" id="booking-types" disabled>
+        <option value="" selected disabled >select booking type</option>
+        <option value="hourly" >Hourly</option>
+        <option value="daily" >Daily</option>
+      </select>
+
+      <label for="start-time">Start Time:</label>
+      <select name="start_time" id="start-time" disabled>
+        <option value="" selected disabled >select the start time</option>
+        <option value="8am" >8AM</option>
+        <option value="9am" >9AM</option>
+        <option value="10am" >10AM</option>
+        <option value="11am" >11AM</option>
+        <option value="12pm" >12PM</option>
+        <option value="13pm" >1PM</option>
+        <option value="14pm" >2PM</option>
+        <option value="15pm" >3PM</option>
+      </select>
+
+      <label for="space-types">Space Types:</label>
+      <select name="space-types" id="space-types" disabled>
+        <option value="" selected disabled >select space type</option>
+      </select>
+
+      <label for="spaces">Spaces:</label>
+      <select name="space_id" id="spaces">
+        <option value="" selected disabled>Select space</option>
+      </select>
+
+      <button type="submit">submit</button>
+    </form>
+  </div>
+</body>
+<script>
+    const dateSelector = document.getElementById('date-selector');
+let dates = document.getElementById("date");
+let spaces = document.getElementById("spaces");
+const form = document.querySelector("form");
+const spaceTypes = document.getElementById("space-types");
+const bookingTypes = document.getElementById("booking-types");
+const startTime = document.getElementById("start-time");
+
+let arr = Array();
+let dateSearch;
+
+// const endpoint = "http://127.0.0.1:8000/api/available/";
+// const endpoint = "https://workspaceapi.herokuapp.com/api/available/";
+
+fetch("https://workspaceapi.herokuapp.com/api/space-type")
+.then(response => response.json())
+.then(data => {
+  data.forEach(d => {
+    console.log(d)
+    let opt = document.createElement("option");
+    opt.value = d.id;
+    opt.textContent = d.space_type_name;
+    spaceTypes.appendChild(opt);
+  })
+});
+
+// search for available houly spaces
+bookingTypes.addEventListener('change', e => {
+  if (e.target.value == "hourly") {
+    
+    let endpoint = ("https://workspaceapi.herokuapp.com/api/available"+'/'+dateSearch);
+
+    let opt = document.createElement("option");
+    opt.textContent = "Select space";
+    opt.setAttribute("disabled", "disabled")
+    opt.setAttribute("selected", "selected")
+    spaces.replaceChildren(opt)
+
+    fetch(endpoint)
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(d => {
+        let opt = document.createElement("option");
+        opt.value = d.id;
+        opt.textContent = d.space_name;
+        spaces.appendChild(opt);
+      });
+
+    startTime.removeAttribute("disabled");
+    spaceTypes.setAttribute("disabled", "disabled");
+    form.setAttribute("action", "https://workspaceapi.herokuapp.com/api/hourly-booking/new");
+
+    });
+
+  } else {
+    startTime.setAttribute("disabled", "disabled");
+    spaceTypes.removeAttribute("disabled");
+    form.setAttribute("action", "https://workspaceapi.herokuapp.com/api/bookings/new");
+  }
+  
+});
+
+
+// search for available spaces
+spaceTypes.addEventListener('change', e => {
+  let endpoint = ("https://workspaceapi.herokuapp.com/api/available"+'/'+dateSearch+'/'+e.target.value);
+
+  let opt = document.createElement("option");
+  opt.textContent = "Select space";
+  opt.setAttribute("disabled", "disabled")
+  opt.setAttribute("selected", "selected")
+  spaces.replaceChildren(opt)
+
+  fetch(endpoint)
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(d => {
+      let opt = document.createElement("option");
+      opt.value = d.id;
+      opt.textContent = d.space_name;
+      spaces.appendChild(opt);
+    })
+  });
+  
+});
+
+dateSelector.addEventListener('change', e => {
+  dateSearch = e.target.value;
+
+  bookingTypes.removeAttribute("disabled");
+
+  arr.push(e.target.value);
+  dates.value = arr;
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</html>
