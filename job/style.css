@@ -97,6 +97,7 @@ body{
     border-radius: 10px 0  0 10px;
     border: 1px solid #333;
     outline: none;
+    width: 250px;
 }
 .email_add{
     margin-left: -10px;
@@ -104,8 +105,12 @@ body{
     border: 1px solid #333;
     border-radius:0 10px 10px 0;
     outline: none;
+    width: 250px;
 }
 .full_name::placeholder, .email_add::placeholder{
+    padding-left: 10px;
+}
+:-ms-input-placeholder{
     padding-left: 10px;
 }
 .form_btn{
@@ -238,13 +243,17 @@ color: #9d9;
     }
     .full_name{
         border-radius: 10px;
+        width: 100%;
     }
     .email_add{
         margin:10px 0 0;
         border-radius:10px;
+        width: 100%;
     }
     .form_btn{
         margin-left: 0px;
+        margin-top: 10px;
+        width: 100%;
     }
     .popup_imge{
         width: 50%;
@@ -270,19 +279,10 @@ color: #9d9;
         flex-direction: column;
         margin: 0 auto;
     }
-    .full_name{
-        width: 100%;
+    .hero_img img{
+        display: block;
+        margin: 10px auto;
     }
-    .email_add{
-        width: 100%;
-        margin:15px 0 0;
-    }
-    .form_btn{
-        width: 100%;
-        margin:15px 0 0;
-        /* text-align: left; */
-    }
-
     .card_parent button{
         width: 100%;
     }

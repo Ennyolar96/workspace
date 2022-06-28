@@ -58,6 +58,20 @@ body{
     box-shadow:0 0 1px 1px #f74!important;
 }
 
+.dropdown-menu .dropdown-item {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 400;
+} 
+.dropdown-menu .dropdown-item:hover{
+    color: #f73;
+    background-color: transparent;
+}
+.dropdown-menu{
+    border-top: 2px solid#f73;
+} 
+
+
 #brand{
     margin:0 -12px 50px;
     padding: 50px 10px;

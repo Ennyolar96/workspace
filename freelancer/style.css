@@ -346,4 +346,7 @@ center.footer{
         right: 1%;
         font-size: 1rem;
     }
+    center.footer a{
+        margin:20px 10px 10px;
+    }
 }
